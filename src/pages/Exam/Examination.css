@@ -1,0 +1,6 @@
+@media only screen and (min-width: 1400px) {
+  .examCard {
+    margin-left: 5%;
+    width: 500px;
+  }
+}

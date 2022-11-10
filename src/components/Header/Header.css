@@ -1,0 +1,7 @@
+.navlinkactive {
+  color: #1a60f6;
+}
+
+body .navbar .nav-link:hover {
+  --bs-nav-link-hover-color: #1a60f6;
+}
