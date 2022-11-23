@@ -5,6 +5,7 @@ import axios from 'axios'
 import { Baseurl } from '../../Config/Baseurl'
 
 export const Timer = () => {
+  const timer = localStorage.getItem('timer')
   const navigate = useNavigate()
   const userId = localStorage.getItem('userId')
   const [data, setData] = useState([])
@@ -41,10 +42,10 @@ export const Timer = () => {
   console.log(data)
   return (
     <div>
-      {data ? (
+      {timer ? (
         <Countdown
-          date={Date.now() + parseInt(data.duration)}
-          // date={Date.now() + 10000000}
+          // date={Date.now() + parseInt(data.duration)}
+          date={Date.now() + 10000000}
           renderer={renderer}
         />
       ) : (

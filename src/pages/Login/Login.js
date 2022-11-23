@@ -32,13 +32,11 @@ export const Login = () => {
         password: values.password,
       })
       .then((res) => {
-        console.log(res)
         localStorage.setItem('userId', res.data.userID)
         localStorage.setItem('user', true)
         navigate('/examination')
       })
       .catch((error) => {
-        console.log(error)
         if (error.request.status === 0) {
           toast.error(error.message, {
             position: toast.POSITION.TOP_RIGHT,
